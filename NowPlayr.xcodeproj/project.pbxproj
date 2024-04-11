@@ -11,6 +11,24 @@
 		5E2DFB342B2B66980071894A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DFB332B2B66980071894A /* ContentView.swift */; };
 		5E2DFB362B2B669A0071894A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DFB352B2B669A0071894A /* Assets.xcassets */; };
 		5E2DFB392B2B669A0071894A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DFB382B2B669A0071894A /* Preview Assets.xcassets */; };
+		5E2DFB422B2B70C70071894A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DFB412B2B70C60071894A /* AppDelegate.swift */; };
+		5E2DFB462B2B72800071894A /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DFB452B2B72800071894A /* StatusBarController.swift */; };
+		5E3877782BC76E900022575B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877772BC76E900022575B /* EventMonitor.swift */; };
+		5E38777B2BC7711D0022575B /* FloatingPlayerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38777A2BC7711D0022575B /* FloatingPlayerWindow.swift */; };
+		5E38777E2BC7750F0022575B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38777D2BC7750F0022575B /* Player.swift */; };
+		5E3877812BC777D00022575B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877802BC777D00022575B /* Constants.swift */; };
+		5E3877842BC77B920022575B /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877832BC77B920022575B /* PlayerManager.swift */; };
+		5E3877872BC77D6F0022575B /* SupportedApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877862BC77D6F0022575B /* SupportedApps.swift */; };
+		5E38778A2BC77DB30022575B /* MusicApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877892BC77DB30022575B /* MusicApplication.swift */; };
+		5E38778C2BC77DBE0022575B /* SpotifyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38778B2BC77DBE0022575B /* SpotifyApplication.swift */; };
+		5E38778E2BC77E5A0022575B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38778D2BC77E5A0022575B /* Track.swift */; };
+		5E3877912BC782600022575B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877902BC782600022575B /* Extensions.swift */; };
+		5E3877952BC784040022575B /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877942BC784040022575B /* AlertItem.swift */; };
+		5E3877972BC788460022575B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877962BC788460022575B /* Helper.swift */; };
+		5E3877992BC78BC80022575B /* OnboardingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877982BC78BC80022575B /* OnboardingWindow.swift */; };
+		5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38779A2BC78CD50022575B /* OnboardingView.swift */; };
+		5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */; };
+		5EBC723D2BC7B1BE00A0B5DB /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +38,24 @@
 		5E2DFB352B2B669A0071894A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2DFB382B2B669A0071894A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E2DFB3A2B2B669A0071894A /* NowPlayr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NowPlayr.entitlements; sourceTree = "<group>"; };
+		5E2DFB412B2B70C60071894A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E2DFB452B2B72800071894A /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		5E3877772BC76E900022575B /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		5E38777A2BC7711D0022575B /* FloatingPlayerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlayerWindow.swift; sourceTree = "<group>"; };
+		5E38777D2BC7750F0022575B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5E3877802BC777D00022575B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E3877832BC77B920022575B /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		5E3877862BC77D6F0022575B /* SupportedApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedApps.swift; sourceTree = "<group>"; };
+		5E3877892BC77DB30022575B /* MusicApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicApplication.swift; sourceTree = "<group>"; };
+		5E38778B2BC77DBE0022575B /* SpotifyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyApplication.swift; sourceTree = "<group>"; };
+		5E38778D2BC77E5A0022575B /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		5E3877902BC782600022575B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5E3877942BC784040022575B /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		5E3877962BC788460022575B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5E3877982BC78BC80022575B /* OnboardingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWindow.swift; sourceTree = "<group>"; };
+		5E38779A2BC78CD50022575B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +88,16 @@
 		5E2DFB302B2B66980071894A /* NowPlayr */ = {
 			isa = PBXGroup;
 			children = (
+				5E38778F2BC780CB0022575B /* Extensions */,
+				5E3877882BC77D980022575B /* ScriptingBridge */,
+				5E3877852BC77D320022575B /* Models */,
+				5E3877822BC77B840022575B /* ViewModels */,
+				5E38777F2BC777C10022575B /* Utilities */,
+				5E38777C2BC775010022575B /* Views */,
+				5E3877792BC770F50022575B /* Windows */,
+				5E2DFB402B2B70140071894A /* Menubar */,
 				5E2DFB312B2B66980071894A /* NowPlayrApp.swift */,
+				5E2DFB412B2B70C60071894A /* AppDelegate.swift */,
 				5E2DFB332B2B66980071894A /* ContentView.swift */,
 				5E2DFB352B2B669A0071894A /* Assets.xcassets */,
 				5E2DFB3A2B2B669A0071894A /* NowPlayr.entitlements */,
@@ -67,6 +112,87 @@
 				5E2DFB382B2B669A0071894A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E2DFB402B2B70140071894A /* Menubar */ = {
+			isa = PBXGroup;
+			children = (
+				5E2DFB452B2B72800071894A /* StatusBarController.swift */,
+			);
+			path = Menubar;
+			sourceTree = "<group>";
+		};
+		5E3877792BC770F50022575B /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				5E38777A2BC7711D0022575B /* FloatingPlayerWindow.swift */,
+				5E3877982BC78BC80022575B /* OnboardingWindow.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		5E38777C2BC775010022575B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5EBC723B2BC7B1A100A0B5DB /* preferenceViews */,
+				5E38777D2BC7750F0022575B /* Player.swift */,
+				5E38779A2BC78CD50022575B /* OnboardingView.swift */,
+				5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5E38777F2BC777C10022575B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5E3877772BC76E900022575B /* EventMonitor.swift */,
+				5E3877802BC777D00022575B /* Constants.swift */,
+				5E3877962BC788460022575B /* Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5E3877822BC77B840022575B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5E3877832BC77B920022575B /* PlayerManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5E3877852BC77D320022575B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E3877862BC77D6F0022575B /* SupportedApps.swift */,
+				5E38778D2BC77E5A0022575B /* Track.swift */,
+				5E3877942BC784040022575B /* AlertItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E3877882BC77D980022575B /* ScriptingBridge */ = {
+			isa = PBXGroup;
+			children = (
+				5E3877892BC77DB30022575B /* MusicApplication.swift */,
+				5E38778B2BC77DBE0022575B /* SpotifyApplication.swift */,
+			);
+			path = ScriptingBridge;
+			sourceTree = "<group>";
+		};
+		5E38778F2BC780CB0022575B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E3877902BC782600022575B /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EBC723B2BC7B1A100A0B5DB /* preferenceViews */ = {
+			isa = PBXGroup;
+			children = (
+				5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */,
+			);
+			path = preferenceViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +223,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					5E2DFB2D2B2B66980071894A = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -139,8 +265,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2DFB422B2B70C70071894A /* AppDelegate.swift in Sources */,
+				5E38778C2BC77DBE0022575B /* SpotifyApplication.swift in Sources */,
 				5E2DFB342B2B66980071894A /* ContentView.swift in Sources */,
+				5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */,
+				5E3877872BC77D6F0022575B /* SupportedApps.swift in Sources */,
+				5E2DFB462B2B72800071894A /* StatusBarController.swift in Sources */,
+				5E3877782BC76E900022575B /* EventMonitor.swift in Sources */,
+				5E3877912BC782600022575B /* Extensions.swift in Sources */,
+				5E3877972BC788460022575B /* Helper.swift in Sources */,
+				5E38777E2BC7750F0022575B /* Player.swift in Sources */,
+				5E3877842BC77B920022575B /* PlayerManager.swift in Sources */,
+				5E3877812BC777D00022575B /* Constants.swift in Sources */,
+				5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */,
+				5E38777B2BC7711D0022575B /* FloatingPlayerWindow.swift in Sources */,
+				5E38778E2BC77E5A0022575B /* Track.swift in Sources */,
 				5E2DFB322B2B66980071894A /* NowPlayrApp.swift in Sources */,
+				5E3877952BC784040022575B /* AlertItem.swift in Sources */,
+				5EBC723D2BC7B1BE00A0B5DB /* PreferenceView.swift in Sources */,
+				5E3877992BC78BC80022575B /* OnboardingWindow.swift in Sources */,
+				5E38778A2BC77DB30022575B /* MusicApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +325,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -244,6 +389,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -271,19 +417,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NowPlayr/NowPlayr.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NowPlayr/Preview Content\"";
+				DEVELOPMENT_TEAM = 3L7TNSC992;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NowPlayr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "NowPlayr requires permission to control your music app and display music data.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.briannewton.NowPlayr;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.briannewton.NowPlayr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,19 +451,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NowPlayr/NowPlayr.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NowPlayr/Preview Content\"";
+				DEVELOPMENT_TEAM = 3L7TNSC992;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NowPlayr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "NowPlayr requires permission to control your music app and display music data.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.briannewton.NowPlayr;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.briannewton.NowPlayr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
