@@ -69,14 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - FLOATING WINDOW
     
     @objc func setupFloatingPlayer() {
-        let windowPosition = {
-            switch self.appearanceType {
-            case .player:
-                return Constants.hiding
-            case .nowPlaying:
-                return Constants.Sections.right.hiding
-            }
-        }()
+        let windowPosition = hidingFunc()
         
         switch appearanceType {
         case .player:
@@ -108,35 +101,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         initSetupHasRun = true
     }
     
+    @objc func resetFloatingPlayerWindow() {
+        self.setupFloatingPlayer()
+    }
+    
+    @objc func resetFloatingPlayerPos() {
+        let windowPosition = hidingFunc()
+        self.floatingPlayerWindow.updatePosition(windowPosition)
+    }
+    
     
     @objc func showFloatingPlayerWindow(_ sender: AnyObject) {
-        let windowPosition = {
-            switch self.appearanceType {
-            case .player:
-                return Constants.showingCenter
-            case .nowPlaying:
-                return Constants.Sections.right.showing
-            }
-        }()
+        let windowPosition = showingFunc()
         
         self.floatingPlayerWindow.makeKeyAndOrderFront(nil)
         playerManager.timerStartSignal.send()
         self.floatingPlayerWindow.updatePosition(windowPosition)
+        self.showPlayerWindow = true
     }
     
     @objc func hideFloatingPlayerWindow(_ sender: AnyObject) {
-        let windowPosition = {
-            switch self.appearanceType {
-            case .player:
-                return Constants.hiding
-            case .nowPlaying:
-                return Constants.Sections.right.hiding
-            }
-        }()
+        let windowPosition = hidingFunc()
         
         self.floatingPlayerWindow.updatePosition(windowPosition)
         self.playerManager.timerStopSignal.send()
         self.floatingPlayerWindow.close()
+        self.showPlayerWindow = false
     }
     
     private func setupFloatingPlayerWindow<Content: View>(size: NSSize, position: CGPoint, view: Content) {
@@ -224,7 +214,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusBarItem.menu = statusBarMenu
             statusBarItem.button?.performClick(nil)
         default:
-            showPopover(statusBarItem.button)
+            statusBarItem.menu = statusBarMenu
+            statusBarItem.button?.performClick(nil)
         }
     }
     
@@ -233,17 +224,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func showHideMiniPlayer(_ sender: NSMenuItem) {
-        print("clicked")
-//        if sender.state == .on {
-//            sender.state = .off
-//            self.showPlayerWindow = false
-//            self.playerManager.timerStopSignal.send()
-//            self.miniPlayerWindow.close()
-//        } else {
-//            sender.state = .on
-//            self.showPlayerWindow = true
-//            self.setupMiniPlayer()
-//        }
+        if sender.state == .on {
+            sender.state = .off
+            self.hideFloatingPlayerWindow(sender)
+        } else {
+            sender.state = .on
+            self.showFloatingPlayerWindow(sender)
+        }
     }
     
     @IBAction func openURL(_ sender: AnyObject) {

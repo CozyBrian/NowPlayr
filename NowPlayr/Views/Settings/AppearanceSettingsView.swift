@@ -37,6 +37,8 @@ struct AppearanceSettingsView: View {
                     }
                     .onChange(of: appearanceType) {
                         self.appearanceTypeAppStorage = appearanceType
+                        NSApplication.shared.sendAction(#selector(AppDelegate.hideFloatingPlayerWindow), to: nil, from: nil)
+                        NSApplication.shared.sendAction(#selector(AppDelegate.resetFloatingPlayerWindow), to: nil, from: nil)
                     }
                     .pickerStyle(.menu)
                  
@@ -62,6 +64,7 @@ struct AppearanceSettingsView: View {
                     }
                     .onChange(of: playerPlacement) {
                         self.playerPlacementAppStorage = playerPlacement
+                        NSApplication.shared.sendAction(#selector(AppDelegate.resetFloatingPlayerPos), to: nil, from: nil)
                     }
                     .pickerStyle(.menu)
                 })

@@ -10,8 +10,10 @@ import AppKit
 
 class FloatingPlayerWindow: NSWindow {
     init() {
+        var hiding = hidingFunc()
+        
         super.init(
-            contentRect: NSRect(x: Constants.hiding.x, y: Constants.hiding.y, width: 370, height: 190),
+            contentRect: NSRect(x: hiding.x, y: hiding.y, width: 370, height: 190),
             styleMask: [.borderless,.resizable,.closable,.fullSizeContentView],
             backing: .buffered,
             defer: false

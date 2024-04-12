@@ -11,11 +11,12 @@ import SwiftUI
 import ScriptingBridge
 
 class PlayerManager: ObservableObject {
-    
     @AppStorage("connectedApp") private var connectedApp = ConnectedApps.spotify
     @AppStorage("showPlayerWindow") private var showPlayerWindow: Bool = false
+    @AppStorage("playerShowDuration") var playerShowDuration: Int = 4
     
     private var initSetupHasRun: Bool = false
+    private var lastPlayedTrack: String = ""
     
     var spotifyApp: SpotifyApplication?
     var appleMusicApp: MusicApplication?
@@ -231,16 +232,17 @@ class PlayerManager: ObservableObject {
     }
     
     func updateFloatingPlayerWindow() {
-        print("I run")
+        @AppStorage("playerShowDuration") var playerShowDur: Int = 4
         if initSetupHasRun {
-            print("were were shown")
-            self.showPlayerWindow = true
-            NSApplication.shared.sendAction(#selector(AppDelegate.showFloatingPlayerWindow), to: nil, from: nil)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                NSApplication.shared.sendAction(#selector(AppDelegate.hideFloatingPlayerWindow), to: nil, from: nil)
-                print("were were hidden")
-                self.showPlayerWindow = false
+            if lastPlayedTrack != track.title {
+                self.showPlayerWindow = true
+                NSApplication.shared.sendAction(#selector(AppDelegate.showFloatingPlayerWindow), to: nil, from: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(playerShowDur)) {
+                    NSApplication.shared.sendAction(#selector(AppDelegate.hideFloatingPlayerWindow), to: nil, from: nil)
+                    self.showPlayerWindow = false
+                }
             }
+            lastPlayedTrack = track.title
         } else {
             initSetupHasRun = true
         }

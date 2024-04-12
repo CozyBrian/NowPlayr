@@ -27,9 +27,9 @@ struct AboutSettingsView: View {
                 
                 Divider()
                 HStack {
-                    Link("GitHub", destination: URL(string: "https://github.com/martinfekete10/Tuneful")!)
+                    Link("GitHub", destination: URL(string: "https://github.com/CozyBrian/NowPlayr")!)
                         .buttonStyle(.bordered)
-                    Link("Website", destination: URL(string: "https://martinfekete.com/Tuneful")!)
+                    Link("Website", destination: URL(string: "https://briannewton.dev/NowPlayr")!)
                         .buttonStyle(.bordered)
                 }
             }
