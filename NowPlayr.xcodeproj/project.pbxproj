@@ -29,6 +29,11 @@
 		5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38779A2BC78CD50022575B /* OnboardingView.swift */; };
 		5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */; };
 		5EBC723D2BC7B1BE00A0B5DB /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */; };
+		5EBC72412BC823EE00A0B5DB /* AlbumInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72402BC823EE00A0B5DB /* AlbumInfoView.swift */; };
+		5EBC72432BC8240700A0B5DB /* PlayingDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72422BC8240700A0B5DB /* PlayingDuration.swift */; };
+		5EBC72452BC8241800A0B5DB /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72442BC8241800A0B5DB /* BottomControls.swift */; };
+		5EBC72472BC8383800A0B5DB /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72462BC8383800A0B5DB /* SliderView.swift */; };
+		5EBC72492BC887CE00A0B5DB /* SliderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72482BC887CE00A0B5DB /* SliderConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		5E38779A2BC78CD50022575B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
 		5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		5EBC72402BC823EE00A0B5DB /* AlbumInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoView.swift; sourceTree = "<group>"; };
+		5EBC72422BC8240700A0B5DB /* PlayingDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingDuration.swift; sourceTree = "<group>"; };
+		5EBC72442BC8241800A0B5DB /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
+		5EBC72462BC8383800A0B5DB /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		5EBC72482BC887CE00A0B5DB /* SliderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5EBC723B2BC7B1A100A0B5DB /* preferenceViews */,
-				5E38777D2BC7750F0022575B /* Player.swift */,
+				5EBC723F2BC822F000A0B5DB /* Player */,
 				5E38779A2BC78CD50022575B /* OnboardingView.swift */,
 				5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */,
 			);
@@ -166,6 +176,7 @@
 				5E3877862BC77D6F0022575B /* SupportedApps.swift */,
 				5E38778D2BC77E5A0022575B /* Track.swift */,
 				5E3877942BC784040022575B /* AlertItem.swift */,
+				5EBC72482BC887CE00A0B5DB /* SliderConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +204,18 @@
 				5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */,
 			);
 			path = preferenceViews;
+			sourceTree = "<group>";
+		};
+		5EBC723F2BC822F000A0B5DB /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5E38777D2BC7750F0022575B /* Player.swift */,
+				5EBC72402BC823EE00A0B5DB /* AlbumInfoView.swift */,
+				5EBC72422BC8240700A0B5DB /* PlayingDuration.swift */,
+				5EBC72442BC8241800A0B5DB /* BottomControls.swift */,
+				5EBC72462BC8383800A0B5DB /* SliderView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,18 +289,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2DFB422B2B70C70071894A /* AppDelegate.swift in Sources */,
+				5EBC72492BC887CE00A0B5DB /* SliderConfig.swift in Sources */,
 				5E38778C2BC77DBE0022575B /* SpotifyApplication.swift in Sources */,
 				5E2DFB342B2B66980071894A /* ContentView.swift in Sources */,
+				5EBC72412BC823EE00A0B5DB /* AlbumInfoView.swift in Sources */,
 				5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */,
 				5E3877872BC77D6F0022575B /* SupportedApps.swift in Sources */,
 				5E2DFB462B2B72800071894A /* StatusBarController.swift in Sources */,
 				5E3877782BC76E900022575B /* EventMonitor.swift in Sources */,
+				5EBC72432BC8240700A0B5DB /* PlayingDuration.swift in Sources */,
+				5EBC72472BC8383800A0B5DB /* SliderView.swift in Sources */,
 				5E3877912BC782600022575B /* Extensions.swift in Sources */,
 				5E3877972BC788460022575B /* Helper.swift in Sources */,
 				5E38777E2BC7750F0022575B /* Player.swift in Sources */,
 				5E3877842BC77B920022575B /* PlayerManager.swift in Sources */,
 				5E3877812BC777D00022575B /* Constants.swift in Sources */,
 				5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */,
+				5EBC72452BC8241800A0B5DB /* BottomControls.swift in Sources */,
 				5E38777B2BC7711D0022575B /* FloatingPlayerWindow.swift in Sources */,
 				5E38778E2BC77E5A0022575B /* Track.swift in Sources */,
 				5E2DFB322B2B66980071894A /* NowPlayrApp.swift in Sources */,

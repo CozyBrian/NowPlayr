@@ -434,6 +434,15 @@ class PlayerManager: ObservableObject {
         }
     }
     
+    func seekTrackFromValue(_ value: CGFloat) {
+        switch connectedApp {
+        case .appleMusic:
+            appleMusicApp?.setPlayerPosition?(trackDuration * value)
+        case .spotify:
+            spotifyApp?.setPlayerPosition?(trackDuration * value)
+        }
+    }
+    
     func updateFormattedPlaybackPosition() {
         switch connectedApp {
         case .spotify:
