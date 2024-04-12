@@ -24,7 +24,7 @@ struct Player: View {
             BottomControls()
             Spacer()
         }
-        .frame(width: 370, height: 200)
+        .frame(width: 370, height: 190)
         .clipped()
         .foregroundColor(.white)
         .background(.black)

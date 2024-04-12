@@ -19,7 +19,7 @@ enum Constants {
     static var hiding: CGPoint {
         let mainScreen = NSScreen.screens[0]
         let screen = mainScreen.frame.size
-        let center = (screen.width / 2) - 155
+        let center = (screen.width / 2) - 185
         return .init(x: center, y: screen.height)
     }
     

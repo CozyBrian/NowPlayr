@@ -12,29 +12,68 @@ struct BottomControls: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "airplayaudio")
-                .imageScale(.medium)
-                .opacity(0)
-            Image(systemName: "backward.fill")
-                .imageScale(.medium)
-                .frame(maxWidth: .infinity)
-                .clipped()
-            Image(systemName: "play.fill")
-                .imageScale(.large)
-                .font(.title2)
-            Image(systemName: "forward.fill")
-                .imageScale(.medium)
-                .frame(maxWidth: .infinity)
-                .clipped()
-            Image(systemName: "airplayaudio")
-                .imageScale(.medium)
-                .foregroundColor(.white.opacity(0.5))
+            Button(action: {
+            }, label: {
+                Image(systemName: playerManager.isLoved ? "heart.fill" : "heart")
+                    .resizable()
+                    .frame(width: 22, height: 22)
+                    .imageScale(.large)
+                    .opacity(playerManager.isLoved ? 0.75 : 0.5)
+                
+            })
+            .buttonStyle(ScaleButtonStyle(action: {
+                playerManager.toggleLoveTrack()
+            }))
+            
+            Spacer()
+            HStack {
+                Button {
+                }label: {
+                    Image(systemName: "backward.fill")
+                        .imageScale(.large)
+                }
+                .buttonStyle(ScaleButtonStyle(action: {
+                    playerManager.previousTrack()
+                }))
+                Spacer()
+                Button {
+                    playerManager.togglePlayPause()
+                } label: {
+                    Image(systemName: playerManager.isPlaying ? "pause.fill" : "play.fill")
+                        .font(.title)
+                        .imageScale(.large)
+                        .scaleEffect(1.05)
+                        .contentTransition(.symbolEffect(.replace,options: .speed(1.9)))
+                        
+                }.buttonStyle(.borderless)
+                
+                Spacer()
+                Button {
+                }label: {
+                    Image(systemName: "forward.fill")
+                        .imageScale(.large)
+                }
+                .buttonStyle(ScaleButtonStyle(action: {
+                    playerManager.nextTrack()
+                }))
+            }
+            .frame(width: 160, height: 40)
+            .clipped()
+            Spacer()
+            Button {
+                print("airpods pressed")
+            } label: {
+                Image(systemName: "airpodspro")
+                    .scaleEffect(1.1)
+                    .symbolRenderingMode(.hierarchical)
+                    .opacity(0.5)
+                    .imageScale(.large)
+            }
+            .buttonStyle(.scaleButton)
         }
-        .frame(maxWidth: .infinity)
-        .clipped()
-        .padding(.horizontal, 32)
-        .padding(.vertical)
-        .font(.title2)
+        .foregroundColor(.white)
+        .padding(.horizontal, 22)
+        .font(.title3)
     }
 }
 

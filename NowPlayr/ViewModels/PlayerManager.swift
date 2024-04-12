@@ -13,7 +13,9 @@ import ScriptingBridge
 class PlayerManager: ObservableObject {
     
     @AppStorage("connectedApp") private var connectedApp = ConnectedApps.spotify
-    @AppStorage("showPlayerWindow") private var showPlayerWindow: Bool = true
+    @AppStorage("showPlayerWindow") private var showPlayerWindow: Bool = false
+    
+    private var initSetupHasRun: Bool = false
     
     var spotifyApp: SpotifyApplication?
     var appleMusicApp: MusicApplication?
@@ -91,7 +93,6 @@ class PlayerManager: ObservableObject {
         
         // Updating player state every 1 sec
         self.timerStartSignal.sink {
-            print("showing")
             self.getCurrentSeekerPosition()
             self.updatePlayerStateCancellable = Timer.publish(
                 every: 1, on: .main, in: .common
@@ -105,7 +106,6 @@ class PlayerManager: ObservableObject {
         .store(in: &self.cancellables)
         
         self.timerStopSignal.sink {
-            print("closing")
             self.updatePlayerStateCancellable = nil
         }
         .store(in: &self.cancellables)
@@ -221,11 +221,28 @@ class PlayerManager: ObservableObject {
         self.updatePlayerState()
         self.updateFormattedDuration()
         self.updateMenuBarText(playerAppIsRunning: isRunningFromNotification)
+        self.updateFloatingPlayerWindow()
     }
     
     private func updateMenuBarText(playerAppIsRunning: Bool) {
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateMenuBarItem"), object: nil, userInfo: ["PlayerAppIsRunning": playerAppIsRunning])
+        }
+    }
+    
+    func updateFloatingPlayerWindow() {
+        print("I run")
+        if initSetupHasRun {
+            print("were were shown")
+            self.showPlayerWindow = true
+            NSApplication.shared.sendAction(#selector(AppDelegate.showFloatingPlayerWindow), to: nil, from: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                NSApplication.shared.sendAction(#selector(AppDelegate.hideFloatingPlayerWindow), to: nil, from: nil)
+                print("were were hidden")
+                self.showPlayerWindow = false
+            }
+        } else {
+            initSetupHasRun = true
         }
     }
     

@@ -9,10 +9,9 @@ import SwiftUI
 import AppKit
 
 class FloatingPlayerWindow: NSWindow {
-    
     init() {
         super.init(
-            contentRect: NSRect(x: Constants.showingCenter.x, y: Constants.showingCenter.y, width: 350, height: 175),
+            contentRect: NSRect(x: Constants.hiding.x, y: Constants.hiding.y, width: 370, height: 190),
             styleMask: [.borderless,.resizable,.closable,.fullSizeContentView],
             backing: .buffered,
             defer: false
@@ -24,11 +23,17 @@ class FloatingPlayerWindow: NSWindow {
         self.titlebarAppearsTransparent = true
 
         self.backgroundColor = .clear
-        self.isMovableByWindowBackground = true
+        self.isMovableByWindowBackground = false
         self.isReleasedWhenClosed = false
 
         self.standardWindowButton(.closeButton)?.isHidden = true
         self.standardWindowButton(.miniaturizeButton)?.isHidden = true
         self.standardWindowButton(.zoomButton)?.isHidden = true
+    }
+    
+    func updatePosition(_ to: CGPoint) {
+//        self.setFrameOrigin(to)
+        let fittingSize = contentView?.fittingSize ?? .zero
+        self.setFrame(.init(origin: to, size: fittingSize), display: true, animate: true)
     }
 }

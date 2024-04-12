@@ -109,3 +109,52 @@ extension DateComponentsFormatter {
         return formatter
     }()
 }
+
+
+struct ButtonPress: ViewModifier {
+    var onPress: () -> Void
+    var onRelease: () -> Void
+    
+    func body(content: Content) -> some View {
+        content
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged({_ in onPress()})
+                    .onEnded({_ in onRelease()})
+            )
+    }
+}
+
+extension View {
+    func pressEvents(onPress: @escaping (() -> Void), onRelease: @escaping (() -> Void)) -> some View {
+        modifier(ButtonPress(onPress: { onPress() }, onRelease: { onRelease() }))
+    }
+}
+
+
+struct ScaleButtonStyle : ButtonStyle {
+    @State private var isPressing: Bool = false
+    let action: () -> Void
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(isPressing ? 0.9 : 1)
+            .modifier(ButtonPress(onPress: {
+                
+                withAnimation(.easeInOut(duration: 0.15)) {
+                    action()
+                    isPressing = true
+                }
+                }, onRelease: {
+                    withAnimation(.easeInOut(duration: 0.15)) {
+                        isPressing = false
+                    }
+                }))
+    }
+}
+
+extension ButtonStyle where Self == ScaleButtonStyle {
+    static var scaleButton: Self { .init {
+        
+    } }
+}

@@ -30,19 +30,17 @@ struct AlbumInfoView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .clipped()
             // Waveform
-            Image("artwork")
+            Image(systemName: "waveform")
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 24)
                 .clipped()
-                .blur(radius: 2)
-                .mask {
-                    Image(systemName: "waveform")
-                        .imageScale(.large)
-                        .symbolRenderingMode(.hierarchical)
-                }
-                .scaleEffect(1.2, anchor: .trailing)
+                .symbolEffect(
+                    .variableColor,
+                    value: playerManager.isPlaying
+                )
+                
         }
         .padding(.top, 22)
         .padding(.horizontal, 22)

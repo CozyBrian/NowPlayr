@@ -10,10 +10,10 @@ import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @AppStorage("showPlayerWindow") var showPlayerWindow: Bool = true
+    private var initSetupHasRun: Bool = false
+    @AppStorage("showPlayerWindow") var showPlayerWindow: Bool = false
     @AppStorage("viewedOnboarding") var viewedOnboarding: Bool = false
     @AppStorage("viewedShortcutsSetup") var viewedShortcutsSetup: Bool = false
-//    @AppStorage("miniPlayerType") var miniPlayerType: MiniPlayerType = .minimal
     @AppStorage("miniPlayerWindowOnTop") var miniPlayerWindowOnTop: Bool = true
     @AppStorage("connectedApp") var connectedApp = ConnectedApps.spotify
     
@@ -52,10 +52,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - FLOATING WINDOW
     
     @objc func setupFloatingPlayer() {
-        let windowPosition = Constants.showingCenter
+        let windowPosition = Constants.hiding
         
         setupFloatingPlayerWindow(
-            size: NSSize(width: 370, height: 200),
+            size: NSSize(width: 370, height: 190),
             position: windowPosition,
             view: Player(parentWindow: floatingPlayerWindow)
         )
@@ -67,9 +67,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         playerManager.timerStartSignal.send()
         
         if !showPlayerWindow {
-            playerManager.timerStopSignal.send()
+            if initSetupHasRun {
+                playerManager.timerStopSignal.send()
+            }
             floatingPlayerWindow.close()
         }
+        initSetupHasRun = true
+    }
+    
+    @objc func showFloatingPlayerWindow(_ sender: AnyObject) {
+        self.floatingPlayerWindow.makeKeyAndOrderFront(nil)
+        playerManager.timerStartSignal.send()
+        self.floatingPlayerWindow.updatePosition(Constants.showingCenter)
+    }
+    
+    @objc func hideFloatingPlayerWindow(_ sender: AnyObject) {
+        self.floatingPlayerWindow.updatePosition(Constants.hiding)
+        self.playerManager.timerStopSignal.send()
+        self.floatingPlayerWindow.close()
     }
     
     private func setupFloatingPlayerWindow<Content: View>(size: NSSize, position: CGPoint, view: Content) {
