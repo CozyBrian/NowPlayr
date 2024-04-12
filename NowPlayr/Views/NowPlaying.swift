@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct NowPlaying: View {
+    @EnvironmentObject var playerManager: PlayerManager
+    
+    private weak var parentWindow: FloatingPlayerWindow!
+    
+    init(parentWindow: FloatingPlayerWindow) {
+        self.parentWindow = parentWindow
+    }
+    
     var body: some View {
+
         HStack(alignment: .top, spacing: 12) {
-            Image("artwork")
+            Image(nsImage: playerManager.track.albumArt)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -22,9 +31,9 @@ struct NowPlaying: View {
                 Text("NOW PLAYING")
                     .font(.system(.caption2, weight: .semibold))
                     .opacity(0.5)
-                Text("Need to Know")
+                Text(playerManager.track.title)
                     .font(.system(.subheadline, weight: .semibold))
-                Text("Doja Cat")
+                Text(playerManager.track.artist)
                     .font(.system(.subheadline, weight: .medium))
                     .opacity(0.9)
             }
@@ -41,22 +50,24 @@ struct NowPlaying: View {
         .clipped()
         .padding()
         .background {
-            Image("artwork")
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .scaleEffect(1.3, anchor: .center)
-                .blur(radius: 36)
-                .overlay {
-                    Rectangle()
-                        .fill(.clear)
-                        .background(Material.ultraThin)
-                        .opacity(0.25)
-                }
-        }.frame(width: 350 ,height: 170)
+            ZStack {
+                Image(nsImage: playerManager.track.albumArt)
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .scaleEffect(1.5, anchor: .center)
+                    .blur(radius: 0)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .blur(radius: 36, opaque: true)
+            }
+            .background(.black.opacity(0.9))
+        }
+        .frame(width: 329 ,height: 155)
+
+
     }
 }
 
 #Preview {
-    NowPlaying()
+    NowPlaying(parentWindow: FloatingPlayerWindow()).environmentObject(PlayerManager())
 }

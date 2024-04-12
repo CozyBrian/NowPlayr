@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2A5D872BC8E305004173A7 /* AppearanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D862BC8E305004173A7 /* AppearanceType.swift */; };
+		5E2A5D8A2BC8FC51004173A7 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D892BC8FC51004173A7 /* Settings */; };
+		5E2A5D8D2BC8FC74004173A7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */; };
+		5E2A5D8F2BC8FD41004173A7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D8E2BC8FD41004173A7 /* Settings.swift */; };
+		5E2A5D922BC8FE66004173A7 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D912BC8FE66004173A7 /* GeneralSettingsView.swift */; };
+		5E2A5D942BC8FE75004173A7 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D932BC8FE75004173A7 /* AppearanceSettingsView.swift */; };
+		5E2A5D962BC8FE83004173A7 /* AboutSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D952BC8FE83004173A7 /* AboutSettingsView.swift */; };
+		5E2A5D982BC907C3004173A7 /* StatusbarItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D972BC907C3004173A7 /* StatusbarItemManager.swift */; };
 		5E2DFB322B2B66980071894A /* NowPlayrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DFB312B2B66980071894A /* NowPlayrApp.swift */; };
 		5E2DFB342B2B66980071894A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DFB332B2B66980071894A /* ContentView.swift */; };
 		5E2DFB362B2B669A0071894A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DFB352B2B669A0071894A /* Assets.xcassets */; };
@@ -28,7 +36,6 @@
 		5E3877992BC78BC80022575B /* OnboardingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3877982BC78BC80022575B /* OnboardingWindow.swift */; };
 		5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38779A2BC78CD50022575B /* OnboardingView.swift */; };
 		5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */; };
-		5EBC723D2BC7B1BE00A0B5DB /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */; };
 		5EBC72412BC823EE00A0B5DB /* AlbumInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72402BC823EE00A0B5DB /* AlbumInfoView.swift */; };
 		5EBC72432BC8240700A0B5DB /* PlayingDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72422BC8240700A0B5DB /* PlayingDuration.swift */; };
 		5EBC72452BC8241800A0B5DB /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72442BC8241800A0B5DB /* BottomControls.swift */; };
@@ -37,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E2A5D862BC8E305004173A7 /* AppearanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceType.swift; sourceTree = "<group>"; };
+		5E2A5D8E2BC8FD41004173A7 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5E2A5D912BC8FE66004173A7 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		5E2A5D932BC8FE75004173A7 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
+		5E2A5D952BC8FE83004173A7 /* AboutSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsView.swift; sourceTree = "<group>"; };
+		5E2A5D972BC907C3004173A7 /* StatusbarItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusbarItemManager.swift; sourceTree = "<group>"; };
 		5E2DFB2E2B2B66980071894A /* NowPlayr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NowPlayr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2DFB312B2B66980071894A /* NowPlayrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayrApp.swift; sourceTree = "<group>"; };
 		5E2DFB332B2B66980071894A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +73,6 @@
 		5E3877982BC78BC80022575B /* OnboardingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWindow.swift; sourceTree = "<group>"; };
 		5E38779A2BC78CD50022575B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
-		5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 		5EBC72402BC823EE00A0B5DB /* AlbumInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoView.swift; sourceTree = "<group>"; };
 		5EBC72422BC8240700A0B5DB /* PlayingDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingDuration.swift; sourceTree = "<group>"; };
 		5EBC72442BC8241800A0B5DB /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
@@ -73,12 +85,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2A5D8D2BC8FC74004173A7 /* LaunchAtLogin in Frameworks */,
+				5E2A5D8A2BC8FC51004173A7 /* Settings in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2A5D902BC8FD93004173A7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5E2A5D912BC8FE66004173A7 /* GeneralSettingsView.swift */,
+				5E2A5D932BC8FE75004173A7 /* AppearanceSettingsView.swift */,
+				5E2A5D952BC8FE83004173A7 /* AboutSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5E2DFB252B2B66980071894A = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +168,7 @@
 		5E38777C2BC775010022575B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5EBC723B2BC7B1A100A0B5DB /* preferenceViews */,
+				5E2A5D902BC8FD93004173A7 /* Settings */,
 				5EBC723F2BC822F000A0B5DB /* Player */,
 				5E38779A2BC78CD50022575B /* OnboardingView.swift */,
 				5EBC72392BC7B05300A0B5DB /* NowPlaying.swift */,
@@ -158,6 +182,7 @@
 				5E3877772BC76E900022575B /* EventMonitor.swift */,
 				5E3877802BC777D00022575B /* Constants.swift */,
 				5E3877962BC788460022575B /* Helper.swift */,
+				5E2A5D8E2BC8FD41004173A7 /* Settings.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -166,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				5E3877832BC77B920022575B /* PlayerManager.swift */,
+				5E2A5D972BC907C3004173A7 /* StatusbarItemManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,6 +203,7 @@
 				5E38778D2BC77E5A0022575B /* Track.swift */,
 				5E3877942BC784040022575B /* AlertItem.swift */,
 				5EBC72482BC887CE00A0B5DB /* SliderConfig.swift */,
+				5E2A5D862BC8E305004173A7 /* AppearanceType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,14 +223,6 @@
 				5E3877902BC782600022575B /* Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		5EBC723B2BC7B1A100A0B5DB /* preferenceViews */ = {
-			isa = PBXGroup;
-			children = (
-				5EBC723C2BC7B1BE00A0B5DB /* PreferenceView.swift */,
-			);
-			path = preferenceViews;
 			sourceTree = "<group>";
 		};
 		5EBC723F2BC822F000A0B5DB /* Player */ = {
@@ -234,6 +253,10 @@
 			dependencies = (
 			);
 			name = NowPlayr;
+			packageProductDependencies = (
+				5E2A5D892BC8FC51004173A7 /* Settings */,
+				5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */,
+			);
 			productName = NowPlayr;
 			productReference = 5E2DFB2E2B2B66980071894A /* NowPlayr.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +285,10 @@
 				Base,
 			);
 			mainGroup = 5E2DFB252B2B66980071894A;
+			packageReferences = (
+				5E2A5D882BC8FC51004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/Settings" */,
+				5E2A5D8B2BC8FC74004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 5E2DFB2F2B2B66980071894A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,13 +317,18 @@
 			files = (
 				5E2DFB422B2B70C70071894A /* AppDelegate.swift in Sources */,
 				5EBC72492BC887CE00A0B5DB /* SliderConfig.swift in Sources */,
+				5E2A5D872BC8E305004173A7 /* AppearanceType.swift in Sources */,
 				5E38778C2BC77DBE0022575B /* SpotifyApplication.swift in Sources */,
 				5E2DFB342B2B66980071894A /* ContentView.swift in Sources */,
 				5EBC72412BC823EE00A0B5DB /* AlbumInfoView.swift in Sources */,
 				5E38779B2BC78CD50022575B /* OnboardingView.swift in Sources */,
 				5E3877872BC77D6F0022575B /* SupportedApps.swift in Sources */,
+				5E2A5D982BC907C3004173A7 /* StatusbarItemManager.swift in Sources */,
 				5E2DFB462B2B72800071894A /* StatusBarController.swift in Sources */,
+				5E2A5D962BC8FE83004173A7 /* AboutSettingsView.swift in Sources */,
 				5E3877782BC76E900022575B /* EventMonitor.swift in Sources */,
+				5E2A5D942BC8FE75004173A7 /* AppearanceSettingsView.swift in Sources */,
+				5E2A5D922BC8FE66004173A7 /* GeneralSettingsView.swift in Sources */,
 				5EBC72432BC8240700A0B5DB /* PlayingDuration.swift in Sources */,
 				5EBC72472BC8383800A0B5DB /* SliderView.swift in Sources */,
 				5E3877912BC782600022575B /* Extensions.swift in Sources */,
@@ -310,7 +342,7 @@
 				5E38778E2BC77E5A0022575B /* Track.swift in Sources */,
 				5E2DFB322B2B66980071894A /* NowPlayrApp.swift in Sources */,
 				5E3877952BC784040022575B /* AlertItem.swift in Sources */,
-				5EBC723D2BC7B1BE00A0B5DB /* PreferenceView.swift in Sources */,
+				5E2A5D8F2BC8FD41004173A7 /* Settings.swift in Sources */,
 				5E3877992BC78BC80022575B /* OnboardingWindow.swift in Sources */,
 				5E38778A2BC77DB30022575B /* MusicApplication.swift in Sources */,
 			);
@@ -529,6 +561,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5E2A5D882BC8FC51004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/Settings" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../swifty/packages/Settings;
+		};
+		5E2A5D8B2BC8FC74004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/LaunchAtLogin-Modern" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../swifty/packages/LaunchAtLogin-Modern";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E2A5D892BC8FC51004173A7 /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+		5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E2DFB262B2B66980071894A /* Project object */;
 }

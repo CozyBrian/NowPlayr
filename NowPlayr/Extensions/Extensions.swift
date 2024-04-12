@@ -64,6 +64,26 @@ extension NSImage {
         }
         return true
     }
+    
+    func roundImage(withSize imageSize: NSSize, radius: CGFloat) -> NSImage {
+        let imageFrame = NSRect(origin: .zero, size: imageSize)
+
+        let newImage = NSImage(size: imageSize)
+        newImage.lockFocus()
+        NSGraphicsContext.saveGraphicsState()
+
+        let path = NSBezierPath(roundedRect: imageFrame, xRadius: radius, yRadius: radius)
+        path.addClip()
+
+        self.size = imageFrame.size
+        self.draw(in: imageFrame, from: NSZeroRect, operation: NSCompositingOperation.sourceOver, fraction: 1.0, respectFlipped: true, hints: nil)
+
+        NSGraphicsContext.restoreGraphicsState()
+
+        newImage.unlockFocus()
+
+        return newImage
+    }
 }
 
 extension Notification.Name {
@@ -157,4 +177,26 @@ extension ButtonStyle where Self == ScaleButtonStyle {
     static var scaleButton: Self { .init {
         
     } }
+}
+
+
+struct VisualEffectView: NSViewRepresentable
+{
+    let material: NSVisualEffectView.Material
+    let blendingMode: NSVisualEffectView.BlendingMode
+    
+    func makeNSView(context: Context) -> NSVisualEffectView
+    {
+        let visualEffectView = NSVisualEffectView()
+        visualEffectView.material = material
+        visualEffectView.blendingMode = blendingMode
+        visualEffectView.state = NSVisualEffectView.State.active
+        return visualEffectView
+    }
+
+    func updateNSView(_ visualEffectView: NSVisualEffectView, context: Context)
+    {
+        visualEffectView.material = material
+        visualEffectView.blendingMode = blendingMode
+    }
 }
