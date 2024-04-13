@@ -289,11 +289,11 @@ class PlayerManager: ObservableObject {
         
         switch connectedApp {
         case .spotify:
-            
             // Track
             self.track.title = spotifyApp?.currentTrack?.name ?? "Unknown Title"
             self.track.artist = spotifyApp?.currentTrack?.artist ?? "Unknown Artist"
             self.track.album = spotifyApp?.currentTrack?.album ?? "Unknown Album"
+            self.isLoved = spotifyApp?.currentTrack?.starred ?? false
             
             // Playback
             self.shuffleIsOn = spotifyApp?.shuffling ?? false
@@ -306,6 +306,14 @@ class PlayerManager: ObservableObject {
                     guard let data = data, error == nil else {
                         print(error!.localizedDescription)
                         self?.sendNotification(title: "Couldn't Retrieve Playback State", message: error!.localizedDescription)
+                        MRMediaRemoteGetNowPlayingInfo(DispatchQueue.main, { (information) in
+                            let temp = information[nowPlayingInfo.artworkData]
+                            if temp != nil {
+                                self?.track.albumArt = NSImage.init(data: (temp as! NSData) as Data)!
+                            } else {
+                                self?.track.albumArt = NSImage()
+                            }
+                        })
                         return
                     }
                     DispatchQueue.main.async {

@@ -170,14 +170,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        statusBarMenu.delegate = self
         
         statusBarMenu.addItem(
-            withTitle: "Show mini player",
+            withTitle: "Show player",
             action: #selector(showHideMiniPlayer),
             keyEquivalent: ""
         )
         .state = showPlayerWindow ? .on : .off
                 
-        statusBarMenu.addItem(.separator())
-        
         statusBarMenu.addItem(
             withTitle: "Settings...",
             action: #selector(openSettings),

@@ -10,7 +10,7 @@ import AppKit
 
 class FloatingPlayerWindow: NSWindow {
     init() {
-        var hiding = hidingFunc()
+        let hiding = hidingFunc()
         
         super.init(
             contentRect: NSRect(x: hiding.x, y: hiding.y, width: 370, height: 190),
@@ -31,6 +31,10 @@ class FloatingPlayerWindow: NSWindow {
         self.standardWindowButton(.closeButton)?.isHidden = true
         self.standardWindowButton(.miniaturizeButton)?.isHidden = true
         self.standardWindowButton(.zoomButton)?.isHidden = true
+    }
+    
+    override var canBecomeKey: Bool {
+        return true
     }
     
     func updatePosition(_ to: CGPoint) {

@@ -21,4 +21,8 @@ class OnboardingWindow: NSWindow {
         self.isReleasedWhenClosed = true
         self.level = .floating
     }
+    
+    override var canBecomeKey: Bool {
+        return true
+    }
 }

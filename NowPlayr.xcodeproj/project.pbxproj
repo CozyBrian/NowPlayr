@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0FA02A2BCA391400660B75 /* MediaRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FA0292BCA391400660B75 /* MediaRemote.swift */; };
 		5E2A5D872BC8E305004173A7 /* AppearanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D862BC8E305004173A7 /* AppearanceType.swift */; };
 		5E2A5D8A2BC8FC51004173A7 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D892BC8FC51004173A7 /* Settings */; };
 		5E2A5D8D2BC8FC74004173A7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E0FA0292BCA391400660B75 /* MediaRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRemote.swift; sourceTree = "<group>"; };
 		5E2A5D862BC8E305004173A7 /* AppearanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceType.swift; sourceTree = "<group>"; };
 		5E2A5D8E2BC8FD41004173A7 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5E2A5D912BC8FE66004173A7 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				5E3877802BC777D00022575B /* Constants.swift */,
 				5E3877962BC788460022575B /* Helper.swift */,
 				5E2A5D8E2BC8FD41004173A7 /* Settings.swift */,
+				5E0FA0292BCA391400660B75 /* MediaRemote.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				5E3877812BC777D00022575B /* Constants.swift in Sources */,
 				5EBC723A2BC7B05300A0B5DB /* NowPlaying.swift in Sources */,
 				5EBC72452BC8241800A0B5DB /* BottomControls.swift in Sources */,
+				5E0FA02A2BCA391400660B75 /* MediaRemote.swift in Sources */,
 				5E38777B2BC7711D0022575B /* FloatingPlayerWindow.swift in Sources */,
 				5E38778E2BC77E5A0022575B /* Track.swift in Sources */,
 				5E2DFB322B2B66980071894A /* NowPlayrApp.swift in Sources */,

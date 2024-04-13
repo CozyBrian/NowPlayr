@@ -28,7 +28,7 @@ struct NowPlaying: View {
                 }
             VStack(alignment: .leading, spacing: 3) {
                 Spacer()
-                Text("NOW PLAYING")
+                Text(playerManager.isPlaying ? "NOW PLAYING" : "PAUSED")
                     .font(.system(.caption2, weight: .semibold))
                     .opacity(0.5)
                 Text(playerManager.track.title)
