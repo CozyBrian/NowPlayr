@@ -20,7 +20,7 @@ class StatusBarItemManager: ObservableObject {
         }
         
         let menuBarView = NSHostingView(rootView: menuBarIconView)
-        menuBarView.frame = NSRect(x: 0, y: 1, width: 20, height: 20)
+        menuBarView.frame = NSRect(x: 0, y: 1, width: 30, height: 20)
         
         return menuBarView
     }
@@ -29,7 +29,7 @@ class StatusBarItemManager: ObservableObject {
 
     private func getImage(albumArt: NSImage, playerAppIsRunning: Bool) -> NSImage {
         if playerAppIsRunning {
-            return albumArt.roundImage(withSize: NSSize(width: 18, height: 18), radius: 4.0)
+            return albumArt.roundImage(withSize: NSSize(width: 16, height: 16), radius: 2.0)
         }
         
         return NSImage(systemSymbolName: "play.fill", accessibilityDescription: "NowPlayer")!
