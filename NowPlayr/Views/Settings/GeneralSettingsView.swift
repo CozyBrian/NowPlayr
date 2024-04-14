@@ -53,7 +53,7 @@ struct GeneralSettingsView: View {
                                 return
                             case .denied:
                                 alertTitle = Text("Permission denied")
-                                alertMessage = Text("Please go to System Settings > Privacy & Security > Automation, and check \(Text(connectedApp.localizedName)) under Tuneful")
+                                alertMessage = Text("Please go to System Settings > Privacy & Security > Automation, and check \(Text(connectedApp.localizedName)) under NowPlayr")
                             }
                             showingAlert = true
                         } label: {
