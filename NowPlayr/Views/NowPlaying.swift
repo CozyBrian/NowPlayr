@@ -56,13 +56,26 @@ struct NowPlaying: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .scaleEffect(1.5, anchor: .center)
-                    .blur(radius: 0)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .blur(radius: 36, opaque: true)
             }
-            .background(.black.opacity(0.9))
+//            .background(.black.opacity(0.9))
         }
         .frame(width: 329 ,height: 155)
+        .gesture(
+                    DragGesture()
+                    .onChanged { value in
+        //                    let offsetX = value.location.x - value.startLocation.x
+        //                    let offsetY = value.location.y - value.startLocation.y
+        //
+        //                    let coords = parentWindow.frame.origin
+        //                    let size = parentWindow.frame.size
+        //
+        //                    let offCoords = CGPoint(x: coords.x + offsetX, y: coords.y - offsetY)
+        //
+        //                    parentWindow.setFrame(NSRect(origin: offCoords, size: size), display: true, animate: false)
+                    }
+                )
 
 
     }

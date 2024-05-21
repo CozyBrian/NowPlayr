@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5E0FA02A2BCA391400660B75 /* MediaRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FA0292BCA391400660B75 /* MediaRemote.swift */; };
 		5E2A5D872BC8E305004173A7 /* AppearanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D862BC8E305004173A7 /* AppearanceType.swift */; };
-		5E2A5D8A2BC8FC51004173A7 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D892BC8FC51004173A7 /* Settings */; };
-		5E2A5D8D2BC8FC74004173A7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */; };
 		5E2A5D8F2BC8FD41004173A7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D8E2BC8FD41004173A7 /* Settings.swift */; };
 		5E2A5D922BC8FE66004173A7 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D912BC8FE66004173A7 /* GeneralSettingsView.swift */; };
 		5E2A5D942BC8FE75004173A7 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5D932BC8FE75004173A7 /* AppearanceSettingsView.swift */; };
@@ -43,6 +41,8 @@
 		5EBC72452BC8241800A0B5DB /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72442BC8241800A0B5DB /* BottomControls.swift */; };
 		5EBC72472BC8383800A0B5DB /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72462BC8383800A0B5DB /* SliderView.swift */; };
 		5EBC72492BC887CE00A0B5DB /* SliderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC72482BC887CE00A0B5DB /* SliderConfig.swift */; };
+		5EC582DE2BFD502F002B08E1 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC582DD2BFD502F002B08E1 /* Settings */; };
+		5EC582E12BFD5069002B08E1 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC582E02BFD5069002B08E1 /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2A5D8D2BC8FC74004173A7 /* LaunchAtLogin in Frameworks */,
-				5E2A5D8A2BC8FC51004173A7 /* Settings in Frameworks */,
+				5EC582E12BFD5069002B08E1 /* LaunchAtLogin in Frameworks */,
+				5EC582DE2BFD502F002B08E1 /* Settings in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +260,8 @@
 			);
 			name = NowPlayr;
 			packageProductDependencies = (
-				5E2A5D892BC8FC51004173A7 /* Settings */,
-				5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */,
+				5EC582DD2BFD502F002B08E1 /* Settings */,
+				5EC582E02BFD5069002B08E1 /* LaunchAtLogin */,
 			);
 			productName = NowPlayr;
 			productReference = 5E2DFB2E2B2B66980071894A /* NowPlayr.app */;
@@ -292,8 +292,8 @@
 			);
 			mainGroup = 5E2DFB252B2B66980071894A;
 			packageReferences = (
-				5E2A5D882BC8FC51004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/Settings" */,
-				5E2A5D8B2BC8FC74004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/LaunchAtLogin-Modern" */,
+				5EC582DC2BFD502F002B08E1 /* XCRemoteSwiftPackageReference "Settings" */,
+				5EC582DF2BFD5069002B08E1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			productRefGroup = 5E2DFB2F2B2B66980071894A /* Products */;
 			projectDirPath = "";
@@ -570,24 +570,34 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		5E2A5D882BC8FC51004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/Settings" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../swifty/packages/Settings;
+/* Begin XCRemoteSwiftPackageReference section */
+		5EC582DC2BFD502F002B08E1 /* XCRemoteSwiftPackageReference "Settings" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Settings";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
 		};
-		5E2A5D8B2BC8FC74004173A7 /* XCLocalSwiftPackageReference "../swifty/packages/LaunchAtLogin-Modern" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../swifty/packages/LaunchAtLogin-Modern";
+		5EC582DF2BFD5069002B08E1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5E2A5D892BC8FC51004173A7 /* Settings */ = {
+		5EC582DD2BFD502F002B08E1 /* Settings */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 5EC582DC2BFD502F002B08E1 /* XCRemoteSwiftPackageReference "Settings" */;
 			productName = Settings;
 		};
-		5E2A5D8C2BC8FC74004173A7 /* LaunchAtLogin */ = {
+		5EC582E02BFD5069002B08E1 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 5EC582DF2BFD5069002B08E1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
 			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
