@@ -65,7 +65,7 @@ Your feedback is important to us. If you encounter any issues or have suggestion
 ## Acknowledgments
 
 - Project is partly based on [Jukebox](https://github.com/Jaysce/Jukebox/tree/main)
-- This project makes use of [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin)
+- This project makes use of [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)
 - Settings window is using [Settings](https://github.com/sindresorhus/Settings) Swift package
 
 ---
